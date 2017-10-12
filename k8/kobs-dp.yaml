@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: kobs
+  labels:
+    app: kobs
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: kobs
+      labels:
+        app: kobs
+    spec:
+      containers:
+        - name: kobs
+          image: euforic/kobs
+          imagePullPolicy: IfNotPresent
+
